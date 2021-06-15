@@ -16,7 +16,7 @@ repositories {
 sonarqube {
 	properties {
 		property "sonar.projectKey", "hirotoKirimaru_sonar-cloud-practice"
-		property "sonar.organization", "hirotoKirimaru-github"
+		property "sonar.organization", "hirotokirimaru-github"
 		property "sonar.host.url", "https://sonarcloud.io"
 	}
 }
