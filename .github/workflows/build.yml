@@ -32,11 +32,11 @@ jobs:
       - name: chmod
         run: chmod 777 gradlew
       - name: test
-        run: ./gradlew test
-      - name: testReport
-        run: ./gradlew jacocoTestReport
-      - name: analyze
-        env:
-          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
-          SONAR_TOKEN: "62fbe0ec5e29acce113b1edb376c800f6c57096e"
-        run: ./gradlew sonarqube
+        run: ./gradlew test jacocoTestReport sonarqube
+#       - name: testReport
+#         run: ./gradlew jacocoTestReport
+#       - name: analyze
+#         env:
+#           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+#           SONAR_TOKEN: "62fbe0ec5e29acce113b1edb376c800f6c57096e"
+#         run: ./gradlew sonarqube
