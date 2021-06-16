@@ -37,8 +37,7 @@ jobs:
         run: ./gradlew jacocoTestReport
       - name: analyze
         env:
-          GITHUB_TOKEN: ""
-#          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
+          GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
 #          SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
 #          TZ: 'Asia/Tokyo'
         run: ./gradlew sonarqube --info
